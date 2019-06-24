@@ -1,0 +1,9 @@
+[Unit]
+Description=Run clr-boot-manager update
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "/usr/bin/clr-boot-manager update; systemctl disable update_kernel.service"
+
+[Install]
+WantedBy=multi-user.target
